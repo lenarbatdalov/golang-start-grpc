@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+// название пакета в котором содержатся прото файлы
+package api;
+
+// опция Go, которая сообщит, что нужно добавить файл относительно файла proto
+option go_package = ".;api";
+// option go_package = "github.com/lenarbatdalov/grpcadder;grpcadder";
+
+// сервис
+service Adder {
+    // rpc метод, ктрый будет доступен клиентам для вызова
+    // метод принимает сообщение и отвечает сообщением
+    rpc Add(AddRequest) returns (AddResponce) {}
+}
+
+// сообщение AddRequest состоит из двух полей
+message AddRequest {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+// сообщение AddResponce - ответ метода
+message AddResponce {
+    int32 result = 1;
+}
