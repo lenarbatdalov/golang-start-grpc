@@ -27,4 +27,15 @@ evans api/proto/adder.proto -p 8080</p>
 <p>вызываю метод</br>
 call Add</p>
 
+<p>Клиент был сгенерирован protobuf в файле ./pkg/api/adder.pb.go в файле ф-ция NewAdderClient (248 строка)</p>
+
+<p>~$ go run ./cmd/server/main.go</p>
+
+<p>~$ go run ./cmd/client/main.go 
+2021/06/01 08:38:20 not enough arguments
+exit status 1
+
+~$ go run ./cmd/client/main.go 1 2
+2021/06/01 08:38:27 3</p>
+
 <p></p>
